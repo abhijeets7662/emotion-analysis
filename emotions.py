@@ -36,7 +36,22 @@ emotion_target_size = emotion_classifier.input_shape[1:3]
 emotion_window = []
 
 # starting video streaming
-
+def draw(l):
+     d = dict(Counter(l))
+     labels = list(d.keys())
+     fracs = list(d.values())
+     for i in range(len(labels)):
+       
+        
+        k = cv2.waitKey(33)
+        ex = np.random.uniform(0.1,0.8, size = (len(labels)))
+        pie(fracs, explode=None, labels=labels, autopct='%1.1f%%', shadow=True)
+        title('Facial Analysis', bbox={'facecolor': '0.8', 'pad': 5})
+        plt.savefig('foo.jpg')
+        plt.show()
+        cvim2disp = cv2.imread('foo.jpg')
+        cv2.imshow('img', cvim2disp)
+        
 cv2.namedWindow('window_frame')
 video_capture = cv2.VideoCapture(0)
 
@@ -121,22 +136,7 @@ while cap.isOpened(): # True:
 cap.release()
 cv2.destroyAllWindows()
 
-def draw(l):
-     d = dict(Counter(l))
-     labels = list(d.keys())
-     fracs = list(d.values())
-     for i in range(len(labels)):
-       
-        
-        k = cv2.waitKey(33)
-        ex = np.random.uniform(0.1,0.8, size = (len(labels)))
-        pie(fracs, explode=None, labels=labels, autopct='%1.1f%%', shadow=True)
-        title('Facial Analysis', bbox={'facecolor': '0.8', 'pad': 5})
-        plt.savefig('foo.jpg')
-        plt.show()
-        cvim2disp = cv2.imread('foo.jpg')
-        cv2.imshow('img', cvim2disp)
-        
+
 
 
 d = dict(Counter(l1))
