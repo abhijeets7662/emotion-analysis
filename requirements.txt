@@ -19,7 +19,7 @@ chardet==3.0.4
 cheroot==8.2.1
 Click==7.0
 cloudant==2.12.0
-cryptography==2.7
+cryptography==3.2
 cymem==2.0.3
 dill==0.2.9
 docutils==0.14
