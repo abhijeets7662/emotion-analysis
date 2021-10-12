@@ -4,7 +4,7 @@ asn1crypto==0.24.0
 astor==0.8.1
 attrs==19.1.0
 autopep8==1.4.4
-aws-encryption-sdk==1.4.0
+aws-encryption-sdk==2.2.0
 aws-encryption-sdk-cli==1.1.5
 base64io==1.0.3
 bert-serving-client==1.10.0
